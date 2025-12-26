@@ -61,8 +61,6 @@ scrollContainer.addEventListener("mouseleave", () => {
 /* START */
 startAutoScroll();
 
-document.addEventListener("DOMContentLoaded", function () {
-
 const form = document.getElementById('contactForm');
 const successMsg = document.querySelector('.success-msg');
 const errorMsg = document.querySelector('.error-msg');
