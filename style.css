@@ -5,6 +5,17 @@
   --accent:#25D366;
   --hover:#133a66;
 }
+.about-feature {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
 
 /* RESET */
 *{
