@@ -63,24 +63,33 @@ startAutoScroll();
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ================= FORM TOAST ================= */
-  const form = document.querySelector("form");
-  const toast = document.getElementById("thankYouToast");
+const form = document.getElementById('contactForm');
+const successMsg = document.querySelector('.success-msg');
+const errorMsg = document.querySelector('.error-msg');
 
-  if (form && toast) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent default form submit
 
-      toast.classList.add("show");
+  const formData = new FormData(form);
+  const action = form.getAttribute('action');
 
-      // Remove toast after 4s
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 4000);
+  fetch(action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      successMsg.style.display = 'block';
+      errorMsg.style.display = 'none';
+      form.reset();
+    } else {
+      throw new Error('Network response was not ok.');
+    }
+  })
+  .catch(error => {
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'block';
+  });
+});
 
-      // Submit form after toast disappears
-      setTimeout(() => {
-        form.submit();
-      }, 4000);
-    });
-  }
