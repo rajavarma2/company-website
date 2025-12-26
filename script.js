@@ -61,27 +61,26 @@ scrollContainer.addEventListener("mouseleave", () => {
 /* START */
 startAutoScroll();
 
-/* ================= THANK YOU TOAST ================= */
+document.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener("load", function () {
-  if (window.location.hash === "#contact") {
-    const toast = document.getElementById("thankYouToast");
-    if (!toast) return;
+  /* ================= FORM TOAST ================= */
+  const form = document.querySelector("form");
+  const toast = document.getElementById("thankYouToast");
 
-    toast.classList.add("show");
+  if (form && toast) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    setTimeout(() => {
-      toast.classList.remove("show");
-    }, 4000);
+      toast.classList.add("show");
+
+      // Remove toast after 4s
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 4000);
+
+      // Submit form after toast disappears
+      setTimeout(() => {
+        form.submit();
+      }, 4000);
+    });
   }
-});
-
-
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 50){
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
