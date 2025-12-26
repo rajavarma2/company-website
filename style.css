@@ -872,3 +872,34 @@ nav a:hover{
     margin: auto;
   }
 }
+
+/* ================= MOBILE SCROLL FIX ================= */
+
+/* Prevent body from blocking horizontal scroll */
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* Allow features to scroll naturally on mobile */
+@media (max-width:768px){
+
+  .about-features{
+    flex-wrap:nowrap;            /* keep cards in one row */
+    overflow-x:auto;             /* enable horizontal scroll */
+    -webkit-overflow-scrolling:touch;
+    justify-content:flex-start;
+    padding-bottom:10px;
+    gap:20px;
+  }
+
+  .about-features::-webkit-scrollbar{
+    display:none;                /* hide scrollbar */
+  }
+
+  .about-feature{
+    min-width:280px;             /* required for scroll */
+    flex-shrink:0;
+  }
+}
+
