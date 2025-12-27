@@ -915,25 +915,6 @@ nav a:hover{
   }
 }
 
-/* ================= HEADER FIX ================= */
-header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-}
-
-header{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: #fff;
-}
-body{
-  padding-top: 80px; /* adjust to header height */
-}
-
 /* ================= MOBILE SCROLL FIX ================= */
 
 /* Prevent body from blocking horizontal scroll */
@@ -966,7 +947,7 @@ html, body{
 
 /* ================= WHY SKILLGLIDER ================= */
 #why-skillglider{
-  padding:100px 20px;
+  padding: 80px 20px;
   background:#fff;
 }
 
