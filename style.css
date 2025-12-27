@@ -1036,3 +1036,38 @@ html, body{
     min-width:280px;              /* REQUIRED for swipe */
   }
 }
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.about-feature{
+  background:#fff;
+  padding:30px 22px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:transform .3s ease;
+}
+
+.about-feature:hover{
+  transform:translateY(-6px);
+}
+
+.about-icon{
+  width:60px;
+  margin-bottom:15px;
+}
+
+.about-feature h4{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.about-feature p{
+  font-size:15px;
+  color:#555;
+}
