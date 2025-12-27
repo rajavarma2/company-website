@@ -786,6 +786,12 @@ nav a:hover{
   }
 }
 
+#about,
+#why-skillglider,
+#founder{
+  padding:70px 20px;
+}
+
 /* ================= MOBILE FIXES ================= */
 @media (max-width: 768px){
 
