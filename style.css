@@ -784,7 +784,7 @@ nav a:hover{
 
   .why-grid{
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 12px;
   }
 
   /* ---------- COURSES ---------- */
@@ -1039,7 +1039,7 @@ html, body{
 
 .why-grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 👈 4 items per row */
+  grid-template-columns: repeat(3, 1fr); /* 👈 4 items per row */
   gap: 30px;
   margin-top: 40px;
 }
